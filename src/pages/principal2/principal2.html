@@ -7,12 +7,17 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>principal2</ion-title>
+    <ion-title>Paises y capitales</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item *ngFor="let p of paises"
+       (click)="irPagina3(p)" >
+      {{p.pais}}
+    </ion-item>
+  </ion-list>
 </ion-content>
