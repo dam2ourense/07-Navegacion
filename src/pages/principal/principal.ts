@@ -1,6 +1,6 @@
 import { Principal2Page } from './../principal2/principal2';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 
 /**
  * Generated class for the PrincipalPage page.
@@ -17,7 +17,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class PrincipalPage {
 
   pagina2:any = Principal2Page;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public menuCtrl: MenuController) {
   }
 
   ionViewDidLoad() {
@@ -26,6 +28,10 @@ export class PrincipalPage {
 
   NavegarPagina(){
     this.navCtrl.push(Principal2Page);
+  }
+
+  mostrarMenu(){
+    this.menuCtrl.toggle();
   }
 
 }
