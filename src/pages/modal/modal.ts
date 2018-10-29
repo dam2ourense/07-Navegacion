@@ -14,8 +14,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'modal.html',
 })
 export class ModalPage {
-
+  nombre_mio: string="";
+  edad_mia:number=0;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.nombre_mio=this.navParams.get("nombre");
+    this.edad_mia= this.navParams.get("edad");
   }
 
   ionViewDidLoad() {
