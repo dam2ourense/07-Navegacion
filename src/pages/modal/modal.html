@@ -15,5 +15,14 @@
 
 <ion-content padding>
   <h1>{{nombre_mio}} {{edad_mia}}</h1>
-
+  <button ion-button
+      block 
+      (click)="cerrar_sin_parametros()">
+    Cerrar sin parámetros
+  </button>
+  <button ion-button
+      block 
+      (click)="cerrar_con_parametros()">
+    Cerrar con parámetros
+  </button>
 </ion-content>

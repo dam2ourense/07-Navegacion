@@ -32,6 +32,12 @@ export class AjustesPage {
     let modal = this.modalCtrl.create(ModalPage, {nombre:"Dolores", edad:24})
     modal.present();
 
+    //para obtener lod párametros de vuelta
+    modal.onDidDismiss( (parametros)=>{
+      console.log ("Datos de vuelta");
+      console.log (parametros);
+    } );
+
   }
 
 }
